@@ -1,13 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { motion } from 'framer-motion';
+import { useTheme } from '@/hooks/useTheme';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import RoomsSection from '@/components/RoomsSection';
+import AmenitiesSection from '@/components/AmenitiesSection';
+import GallerySection from '@/components/GallerySection';
+import ContactSection from '@/components/ContactSection';
+import HotelFooter from '@/components/HotelFooter';
 
 const Index = () => {
+  const { isDark, toggle } = useTheme();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="min-h-screen bg-background transition-colors duration-500"
+    >
+      <Navbar isDark={isDark} onToggleTheme={toggle} />
+      <HeroSection />
+      <AboutSection />
+      <RoomsSection />
+      <AmenitiesSection />
+      <GallerySection />
+      <ContactSection />
+      <HotelFooter />
+    </motion.div>
   );
 };
 
