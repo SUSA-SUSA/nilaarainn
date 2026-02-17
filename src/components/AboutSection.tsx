@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
-import { MapPin, Star, Hotel, Users, BedDouble, Phone } from 'lucide-react';
+import { MapPin, Star, Hotel, Users, BedDouble, Phone, Building2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AnimatedCounter = ({ target, suffix = '', label }: { target: number; suffix?: string; label: string }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -98,7 +99,7 @@ const AboutSection = () => {
           </div>
 
           {/* Location & Contact */}
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-4 mb-8">
             <div className="flex items-start gap-3 p-4 rounded-xl bg-secondary/50">
               <MapPin size={24} className="text-primary mt-1 shrink-0" />
               <div>
@@ -122,6 +123,17 @@ const AboutSection = () => {
                 <p className="text-muted-foreground text-sm">info@nilaara.in</p>
               </div>
             </div>
+          </div>
+
+          {/* Our Business Button */}
+          <div className="text-center">
+            <Link
+              to="/our-business"
+              className="inline-flex items-center gap-2 btn-gradient px-8 py-3 rounded-xl font-medium text-primary-foreground shimmer transition-all duration-300 hover:scale-105 glow-shadow"
+            >
+              <Building2 size={18} />
+              Our Business – Sri Arunachala Group
+            </Link>
           </div>
         </motion.div>
       </div>
