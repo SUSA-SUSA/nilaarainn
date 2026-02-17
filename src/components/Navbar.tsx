@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   isDark: boolean;
@@ -19,6 +20,8 @@ const navLinks = [
 const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -28,9 +31,23 @@ const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      return;
+    }
     const el = document.querySelector(href);
     el?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // Handle hash scrolling after navigating back to home
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      setTimeout(() => {
+        const el = document.querySelector(location.hash);
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  }, [location]);
 
   return (
     <nav
