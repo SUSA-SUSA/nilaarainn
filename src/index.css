@@ -6,100 +6,100 @@
 
 @layer base {
   :root {
-    --background: 40 33% 97%;
-    --foreground: 30 20% 15%;
+    --background: 36 27% 93%;
+    --foreground: 14 24% 18%;
 
-    --card: 40 30% 99%;
-    --card-foreground: 30 20% 15%;
+    --card: 40 30% 96%;
+    --card-foreground: 14 24% 18%;
 
-    --popover: 40 30% 99%;
-    --popover-foreground: 30 20% 15%;
+    --popover: 40 30% 96%;
+    --popover-foreground: 14 24% 18%;
 
-    --primary: 45 65% 52%;
+    --primary: 5 28% 23%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 25% 92%;
-    --secondary-foreground: 30 20% 20%;
+    --secondary: 36 25% 87%;
+    --secondary-foreground: 14 24% 18%;
 
-    --muted: 40 20% 94%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 36 20% 90%;
+    --muted-foreground: 18 16% 31%;
 
-    --accent: 38 70% 45%;
+    --accent: 14 28% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 25% 88%;
-    --input: 40 25% 88%;
-    --ring: 45 65% 52%;
+    --border: 30 20% 82%;
+    --input: 30 20% 82%;
+    --ring: 5 28% 23%;
 
     --radius: 0.75rem;
 
-    --hero-gradient-from: 40 33% 97%;
-    --hero-gradient-to: 45 50% 90%;
-    --glow-color: 45 80% 55%;
-    --glass-bg: 40 30% 99% / 0.7;
-    --glass-border: 40 25% 88% / 0.5;
-    --card-shadow: 45 60% 50%;
-    --shimmer-color: 45 70% 70%;
-    --badge-bg: 45 65% 52%;
+    --hero-gradient-from: 36 27% 93%;
+    --hero-gradient-to: 30 25% 85%;
+    --glow-color: 5 28% 30%;
+    --glass-bg: 40 30% 96% / 0.75;
+    --glass-border: 30 20% 82% / 0.5;
+    --card-shadow: 14 28% 32%;
+    --shimmer-color: 14 20% 50%;
+    --badge-bg: 5 28% 23%;
     --badge-foreground: 0 0% 100%;
-    --footer-from: 30 20% 15%;
-    --footer-to: 30 25% 10%;
-    --footer-foreground: 40 30% 90%;
+    --footer-from: 14 24% 18%;
+    --footer-to: 14 28% 12%;
+    --footer-foreground: 36 25% 90%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 36 27% 93%;
+    --sidebar-foreground: 14 24% 18%;
+    --sidebar-primary: 5 28% 23%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 36 25% 87%;
+    --sidebar-accent-foreground: 14 24% 18%;
+    --sidebar-border: 30 20% 82%;
+    --sidebar-ring: 5 28% 23%;
   }
 
   .dark {
-    --background: 270 40% 8%;
-    --foreground: 270 20% 92%;
+    --background: 14 28% 10%;
+    --foreground: 36 25% 90%;
 
-    --card: 270 35% 12%;
-    --card-foreground: 270 20% 92%;
+    --card: 14 25% 14%;
+    --card-foreground: 36 25% 90%;
 
-    --popover: 270 35% 12%;
-    --popover-foreground: 270 20% 92%;
+    --popover: 14 25% 14%;
+    --popover-foreground: 36 25% 90%;
 
-    --primary: 270 70% 65%;
+    --primary: 14 30% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 30% 18%;
-    --secondary-foreground: 270 20% 90%;
+    --secondary: 14 20% 18%;
+    --secondary-foreground: 36 25% 88%;
 
-    --muted: 270 25% 16%;
-    --muted-foreground: 270 15% 60%;
+    --muted: 14 18% 16%;
+    --muted-foreground: 30 15% 55%;
 
-    --accent: 275 80% 60%;
+    --accent: 14 35% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 270 25% 20%;
-    --input: 270 25% 20%;
-    --ring: 270 70% 65%;
+    --border: 14 20% 22%;
+    --input: 14 20% 22%;
+    --ring: 14 30% 55%;
 
-    --hero-gradient-from: 270 40% 8%;
-    --hero-gradient-to: 260 45% 15%;
-    --glow-color: 270 80% 65%;
-    --glass-bg: 270 35% 15% / 0.6;
-    --glass-border: 270 40% 30% / 0.4;
-    --card-shadow: 270 70% 50%;
-    --shimmer-color: 270 70% 70%;
-    --badge-bg: 270 70% 65%;
+    --hero-gradient-from: 14 28% 10%;
+    --hero-gradient-to: 14 25% 16%;
+    --glow-color: 14 35% 50%;
+    --glass-bg: 14 25% 14% / 0.7;
+    --glass-border: 14 20% 25% / 0.4;
+    --card-shadow: 14 30% 40%;
+    --shimmer-color: 14 30% 50%;
+    --badge-bg: 14 30% 55%;
     --badge-foreground: 0 0% 100%;
-    --footer-from: 270 45% 8%;
-    --footer-to: 275 50% 5%;
-    --footer-foreground: 270 30% 85%;
+    --footer-from: 14 28% 8%;
+    --footer-to: 14 30% 5%;
+    --footer-foreground: 36 20% 80%;
   }
 }
 
