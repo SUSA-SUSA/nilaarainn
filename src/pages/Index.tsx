@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import RoomsSection from '@/components/RoomsSection';
 import AmenitiesSection from '@/components/AmenitiesSection';
 import GallerySection from '@/components/GallerySection';
+import AttractionsSection from '@/components/AttractionsSection';
 import ContactSection from '@/components/ContactSection';
 import HotelFooter from '@/components/HotelFooter';
 
@@ -25,6 +26,7 @@ const Index = () => {
       <RoomsSection />
       <AmenitiesSection />
       <GallerySection />
+      <AttractionsSection />
       <ContactSection />
       <HotelFooter />
     </motion.div>
