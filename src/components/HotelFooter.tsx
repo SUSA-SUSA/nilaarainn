@@ -1,18 +1,20 @@
+import { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
-const HotelFooter = () => {
+const HotelFooter = forwardRef<HTMLElement>((_, ref) => {
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <footer className="footer-gradient text-[hsl(var(--footer-foreground))] py-16 px-6">
+    <footer ref={ref} className="footer-gradient text-[hsl(var(--footer-foreground))] py-16 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Nilaara Inn</h3>
+            <img src={logo} alt="Nilaara Inn" className="h-12 w-auto mb-4 brightness-110" />
             <p className="text-[hsl(var(--footer-foreground))]/70 text-sm leading-relaxed">
               Your premium boutique hotel in Tiruvannamalai. Experience luxury, comfort, and warm hospitality.
             </p>
@@ -75,6 +77,8 @@ const HotelFooter = () => {
       </div>
     </footer>
   );
-};
+});
+
+HotelFooter.displayName = 'HotelFooter';
 
 export default HotelFooter;
