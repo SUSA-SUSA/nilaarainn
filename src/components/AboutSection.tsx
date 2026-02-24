@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { MapPin, Star, Hotel, Users, BedDouble, Phone, Building2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SectionHeader from './SectionHeader';
 
 const AnimatedCounter = ({ target, suffix = '', label }: { target: number; suffix?: string; label: string }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,17 +40,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-6">
       <div className="container mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Discover</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">About Nilaara Inn</h2>
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
-        </motion.div>
+        <SectionHeader subtitle="Discover" title="About Nilaara Inn" />
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}

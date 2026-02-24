@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import SectionHeader from './SectionHeader';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -24,17 +25,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Reservations</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Book Your Stay</h2>
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
-        </motion.div>
+          <SectionHeader subtitle="Reservations" title="Book Your Stay" />
 
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Left: Map & Info */}
