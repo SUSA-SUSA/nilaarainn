@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
+import logo from '@/assets/logo.png';
 
 interface NavbarProps {
   isDark: boolean;
@@ -57,9 +58,7 @@ const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <button onClick={() => scrollTo('#home')} className="group">
-          <h1 className="text-2xl font-serif font-bold text-foreground transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_12px_hsl(var(--glow-color)/0.5)]">
-            Nilaara Inn
-          </h1>
+          <img src={logo} alt="Nilaara Inn" className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:drop-shadow-[0_0_12px_hsl(var(--glow-color)/0.5)]" />
         </button>
 
         {/* Desktop nav */}

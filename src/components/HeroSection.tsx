@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import heroImg from '@/assets/hero-hotel.jpg';
+import bannerImg from '@/assets/hotel-banner.jpg';
 
 const letterVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -21,7 +22,7 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Nilaara Inn" className="w-full h-full object-cover" />
+        <img src={bannerImg} alt="Nilaara Inn" className="w-full h-full object-cover" />
         <div className="absolute inset-0 hero-gradient opacity-70" />
         <div className="absolute inset-0 bg-foreground/20" />
       </div>
