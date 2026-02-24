@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 import gallery1 from '@/assets/gallery-1.jpg';
 import gallery2 from '@/assets/gallery-2.jpg';
 import gallery3 from '@/assets/gallery-3.jpg';
@@ -23,17 +24,7 @@ const GallerySection = () => {
   return (
     <section id="gallery" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Visual Tour</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Gallery</h2>
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
-        </motion.div>
+          <SectionHeader subtitle="Visual Tour" title="Gallery" />
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((img, i) => (

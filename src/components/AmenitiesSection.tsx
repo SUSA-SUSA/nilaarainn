@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Wifi, Snowflake, Car, Zap, ShieldCheck, Flame, Bath, Sparkles } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 const amenities = [
   { icon: Wifi, label: 'Free WiFi', desc: 'High-speed internet' },
@@ -16,17 +17,7 @@ const AmenitiesSection = () => {
   return (
     <section id="amenities" className="py-24 px-6">
       <div className="container mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Services</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Amenities</h2>
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
-        </motion.div>
+          <SectionHeader subtitle="Services" title="Amenities" />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {amenities.map((item, i) => (
